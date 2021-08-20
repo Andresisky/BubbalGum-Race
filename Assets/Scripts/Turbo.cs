@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Turbo : MonoBehaviour
 {
-    [SerializeField]
-    float velocidad = 15f;
+    public ArcadeCar carControl;
+   [ SerializeField]
+   float constDeAumentoVelocidad;
 
     public ParticleSystem turbo;
-    public ParticleSystem laser;
-    public  GameObject laserM;
+    //public ParticleSystem laser;
+    public  GameObject laser;
 
     public Transform pivot;
 
@@ -34,39 +35,19 @@ public class Turbo : MonoBehaviour
         Movimiento();
         ActiveTurbo();
         Shooting();
+        
     }
 
 
     public void Movimiento()
     {
-        if(Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.back * velocidad * Time.deltaTime);
-        }
-
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.forward* velocidad * Time.deltaTime);
-        }
-
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(Vector3.left * velocidad * Time.deltaTime);
-        }
-
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * velocidad * Time.deltaTime);
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             turbo.Play();
             activo = true;
-            velocidad += 10f;
+            carControl.accelerationCurve =AnimationCurve.Linear(0.0f, 0.0f, 0.09f, 139.5f);
 
         }
     }
@@ -81,42 +62,43 @@ public class Turbo : MonoBehaviour
         }
         else
         {
-            velocidad = 5f;
+            //carControl.accelerationCurve = AnimationCurve.Linear(0.0f, 0.0f, 5.0f, 100.0f);
         }
 
-        if(timeCont > 1f)
+        if(timeCont > 0.2f)
         {
             activo = false;
             turbo.Stop();
             timeCont = 0.0f;
+            carControl.accelerationCurve = AnimationCurve.Linear(0.0f, 0.0f, 5.0f, 100.0f);
         }
         
     }
 
     public void Shooting()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            laser.Play();
-            laserActivo = true;
-        }
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    laser.Play();
+        //    laserActivo = true;
+        //}
 
-        if(laserActivo)
-        {
-            timeContLaser += 0.1f * Time.deltaTime;
-        }
+        //if(laserActivo)
+        //{
+        //    timeContLaser += 0.1f * Time.deltaTime;
+        //}
 
-        if(timeContLaser > 0.5f)
-        {
-            laserActivo = false;
-            laser.Stop();
-            timeContLaser = 0.0f;
-        }
+        //if(timeContLaser > 0.5f)
+        //{
+        //    laserActivo = false;
+        //    laser.Stop();
+        //    timeContLaser = 0.0f;
+        //}
 
 
         if(Input.GetMouseButtonDown(1))
         {
-            Instantiate(laserM, pivot.position, transform.rotation);
+           Instantiate(laser, pivot.position, transform.rotation);
             
         }
 

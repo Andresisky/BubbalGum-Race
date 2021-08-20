@@ -13,6 +13,9 @@ public class ArcadeCar : MonoBehaviour
 
     const float wheelWidth = 0.085f;
 
+    
+
+
 
     public class WheelData
     {
@@ -1058,6 +1061,7 @@ public class ArcadeCar : MonoBehaviour
         {
             Debug.DrawRay(wheelData.touchPoint.point, frictionForce, Color.red);
             Debug.DrawRay(wheelData.touchPoint.point, longitudinalForce, Color.white);
+            
         }
 
         // Apply resulting force
@@ -1067,6 +1071,7 @@ public class ArcadeCar : MonoBehaviour
         // Engine force
         if (!isBrake && axle.isPowered && Mathf.Abs(accelerationForceMagnitude) > 0.01f)
         {
+            
             Vector3 accForcePoint = wheelData.touchPoint.point - (wsDownDirection * 0.2f);
             Vector3 engineForce = c_fwd * accelerationForceMagnitude / (float)numberOfPoweredWheels / dt;
             AddForceAtPosition(engineForce, accForcePoint);
