@@ -21,6 +21,7 @@ public class PlayerNetwork : MonoBehaviourPun
                 else if (scripts[i] is PhotonView) continue;
                 else if (scripts[i] is PhotonTransformView) continue;
                 else if (scripts[i] is PhotonRigidbodyView) continue;
+                else if (scripts[i] is Turbo) continue;
 
                 scripts[i].enabled = false;
             }

@@ -2823,7 +2823,7 @@ Transform:
   m_Children:
   - {fileID: 1153362056475046441}
   m_Father: {fileID: 6116879202781530316}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1153362055096688608
 ParticleSystem:
@@ -28220,11 +28220,11 @@ GameObject:
   - component: {fileID: 7404853984787880666}
   - component: {fileID: 7404853984787880664}
   - component: {fileID: 6892853330099622525}
+  - component: {fileID: 2373535709881858032}
   - component: {fileID: 1344292196669551229}
   - component: {fileID: 2969944860046347084}
   - component: {fileID: 1533967438459672846}
   - component: {fileID: 1614735257099485634}
-  - component: {fileID: 2373535709881858032}
   m_Layer: 0
   m_Name: DeLorean
   m_TagString: Untagged
@@ -28541,6 +28541,26 @@ MonoBehaviour:
   bulletTopTXT: {fileID: 2638813218267301568}
   bulletCont: 100
   cooldownTimer: 60
+--- !u!114 &2373535709881858032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892853330099622518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb5417214cf5274bb1f668368d7b9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carControl: {fileID: 7404853984787880664}
+  constDeAumentoVelocidad: 200
+  turbo: {fileID: 1153362055096688608}
+  laser: {fileID: 2900314344346683255, guid: 83eb07d0d3bc07547978315ade9c4365, type: 3}
+  pivot: {fileID: 2462528554408544166}
+  timeCont: 0
+  timeContLaser: 0
+  turboLimit: 150
 --- !u!114 &1344292196669551229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28611,25 +28631,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &2373535709881858032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6892853330099622518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb5417214cf5274bb1f668368d7b9a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carControl: {fileID: 7404853984787880664}
-  constDeAumentoVelocidad: 200
-  turbo: {fileID: 1153362055096688608}
-  laser: {fileID: 2900314344346683255, guid: 83eb07d0d3bc07547978315ade9c4365, type: 3}
-  pivot: {fileID: 2462528554408544166}
-  timeCont: 0
-  timeContLaser: 0
 --- !u!1 &6895568872018574953
 GameObject:
   m_ObjectHideFlags: 0
@@ -30090,7 +30091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6116879202781530316}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7340408962487460869
 GameObject:
