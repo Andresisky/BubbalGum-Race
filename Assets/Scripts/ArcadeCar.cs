@@ -428,7 +428,7 @@ public class ArcadeCar : MonoBehaviour
             h = 0.0f;
         }
 
-        if (Input.GetKey(KeyCode.R) && controllable)
+        if (Input.GetKey(KeyCode.F) && controllable)
         {
             Debug.Log("Reset pressed");
             Ray resetRay = new Ray();

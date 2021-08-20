@@ -5,12 +5,13 @@ using Photon.Pun;
 public class PlayerNetwork : MonoBehaviourPun
 {
     public GameObject localCam;
-
+    public GameObject localCanvas;
     private void Start()
     {
         if (!photonView.IsMine)
         {
             localCam.SetActive(false);
+            localCanvas.SetActive(false);
 
             MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
 
