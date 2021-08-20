@@ -24,9 +24,12 @@ public class Turbo : MonoBehaviour
     bool activo;
     bool laserActivo;
 
+    AnimationCurve aux;
+    public float turboLimit;
+
     void Start()
     {
-        
+        aux = carControl.accelerationCurve;
     }
 
     // Update is called once per frame
@@ -41,14 +44,12 @@ public class Turbo : MonoBehaviour
 
     public void Movimiento()
     {
-        
-
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             turbo.Play();
             activo = true;
-            carControl.accelerationCurve =AnimationCurve.Linear(0.0f, 0.0f, 0.09f, 139.5f);
-
+            carControl.accelerationCurve = AnimationCurve.Linear(0.0f, 0.0f, 0.09f, turboLimit);
+            //carControl.accelerationCurve = aux;
         }
     }
 
@@ -56,9 +57,7 @@ public class Turbo : MonoBehaviour
     {
         if(activo)
         {
-           
             timeCont += 0.1f * Time.deltaTime;
-           
         }
         else
         {
@@ -70,7 +69,8 @@ public class Turbo : MonoBehaviour
             activo = false;
             turbo.Stop();
             timeCont = 0.0f;
-            carControl.accelerationCurve = AnimationCurve.Linear(0.0f, 0.0f, 5.0f, 100.0f);
+            //carControl.accelerationCurve = AnimationCurve.Linear(0.0f, 0.0f, 5.0f, 100.0f);
+            carControl.accelerationCurve = aux;
         }
         
     }
