@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: 1875dd72758742f4fab284c589e295c8
+guid: 22726a98969be684c86ba857fd58e16f
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 5843995883812439712
+    second: BatMobileBody|BatMobileBody|Take 001|BaseLayer
+  - first:
+      74: 5299228574241254727
+    second: BatMobileBody|Batmobile|Take 001|BaseLayer
   externalObjects: {}
   materials:
     materialImportMode: 2
