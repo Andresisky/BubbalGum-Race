@@ -46,6 +46,7 @@ public class Turbo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            SoundSystem.instance.PlayTurbo();
             turbo.Play();
             activo = true;
             carControl.accelerationCurve = AnimationCurve.Linear(0.0f, 0.0f, 0.09f, turboLimit);
@@ -98,7 +99,8 @@ public class Turbo : MonoBehaviour
 
         if(Input.GetMouseButtonDown(1))
         {
-           Instantiate(laser, pivot.position, transform.rotation);
+            SoundSystem.instance.PlayCanon();
+            Instantiate(laser, pivot.position, transform.rotation);
             
         }
 

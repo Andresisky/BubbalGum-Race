@@ -82,6 +82,7 @@ public class GunMachine : MonoBehaviour
             GameObject nextBullet;
             if (Time.time > shotRaceTime)
             {
+                SoundSystem.instance.PlayDisparo();
                 for (int i = 0; i < spawnPoint.Length; i++)
                 {
                     nextBullet = Instantiate(bullet, spawnPoint[i].position, spawnPoint[i].rotation);
