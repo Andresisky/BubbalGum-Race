@@ -22239,7 +22239,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 1781643815980147193}
   - {fileID: 6487997727910710848}
-  sceneViewId: 0
+  sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1781643815980147193
@@ -33840,7 +33840,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 544ed715580e02046975afb697c67348, type: 2}
   - {fileID: 2100000, guid: f663999560b7b9c4c82fe42c206c89a9, type: 2}
-  - {fileID: 2100000, guid: 876ceb4283501d34ebc8091809e4e793, type: 2}
+  - {fileID: 2100000, guid: f663999560b7b9c4c82fe42c206c89a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
