@@ -11,9 +11,12 @@ public class SoundSystem : MonoBehaviour
     public AudioClip audioMachineGun;
     public AudioClip audioCanon;
     public AudioClip audioTurbo;
+
+    //para áñadir mas fuentes de sonido
     public AudioSource audioSource;
     public AudioSource audioSource2;
 
+    //no se toca put* el que toca
     private void Awake()
     {
         if (SoundSystem.instance == null)//si no tiene nada asigando se lo asigna 
@@ -49,6 +52,7 @@ public class SoundSystem : MonoBehaviour
     {
         PlayAudioClip2(audioTurbo);
     }
+    //AUDIO SOURCE
 
     private void PlayAudioClip(AudioClip audioClip)
     {
@@ -61,6 +65,8 @@ public class SoundSystem : MonoBehaviour
         audioSource2.Play();
     }
 
+
+    //esto no se toca es del singlenton
     private void OnDestroy()
     {
         if (SoundSystem.instance == this)
