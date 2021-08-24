@@ -99,7 +99,7 @@ public class Turbo : MonoBehaviour
 
         if(Input.GetMouseButtonDown(1))
         {
-            SoundSystem.instance.PlayCanon();
+            SoundSystem.instance.PlayCannon();
             Instantiate(laser, pivot.position, transform.rotation);
             
         }

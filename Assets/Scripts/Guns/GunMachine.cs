@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class GunMachine : MonoBehaviour
+using Photon.Pun;
+public class GunMachine : MonoBehaviourPun
 {
-    public GameObject bullet;
+    //public GameObject bullet;
     public Transform[] spawnPoint;
+    public Rigidbody bulletRb;
 
     public float shotForce = 3500;
     public float shotRace = 0.1f;
@@ -80,15 +82,17 @@ public class GunMachine : MonoBehaviour
         if (bulletCont > 0)
         {
             GameObject nextBullet;
+
             if (Time.time > shotRaceTime)
             {
-                SoundSystem.instance.PlayDisparo();
+                SoundSystem.instance.PlayShoot();
                 for (int i = 0; i < spawnPoint.Length; i++)
                 {
-                    nextBullet = Instantiate(bullet, spawnPoint[i].position, spawnPoint[i].rotation);
+                    nextBullet = PhotonNetwork.Instantiate("Bullet", spawnPoint[i].position, spawnPoint[i].rotation);
 
                     //Force Bullet
                     nextBullet.GetComponent<Rigidbody>().AddForce(spawnPoint[i].forward * shotForce);
+
                     shotRaceTime = Time.time + shotRace;
                     Destroy(nextBullet, 2);
                 }

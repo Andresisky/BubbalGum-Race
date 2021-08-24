@@ -6,10 +6,10 @@ public class SoundSystem : MonoBehaviour
 {
     public static SoundSystem instance;
 
-    public AudioClip audioClipAcelera;
-    public AudioClip audioFrena;
+    public AudioClip audioSpeedUp;
+    public AudioClip audioBrake;
     public AudioClip audioMachineGun;
-    public AudioClip audioCanon;
+    public AudioClip audioCannon;
     public AudioClip audioTurbo;
 
     //para áñadir mas fuentes de sonido
@@ -31,21 +31,21 @@ public class SoundSystem : MonoBehaviour
         }
     }
     //Ponemos un metodo con el nombre y el audiosource para anadir
-    public void PlayAcelera()
+    public void PlaySpeedUp()
     {
-        PlayAudioClip(audioClipAcelera);
+        PlayAudioClip(audioSpeedUp);
     }
-    public void PlayFreno()
+    public void PlayBrake()
     {
-        PlayAudioClip(audioFrena);
+        PlayAudioClip(audioBrake);
     }
-    public void PlayDisparo()
+    public void PlayShoot()
     {
         PlayAudioClip(audioMachineGun);
     }
-    public void PlayCanon()
+    public void PlayCannon()
     {
-        PlayAudioClip2(audioCanon);
+        PlayAudioClip2(audioCannon);
     }
 
     public void PlayTurbo()
