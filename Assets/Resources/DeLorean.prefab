@@ -28836,7 +28836,6 @@ MonoBehaviour:
   spawnPoint:
   - {fileID: 7404853982944551358}
   - {fileID: 16756811387838625}
-  bulletRb: {fileID: -9030263322563451368, guid: d63fb61b8dfec9943bac862c1f86afbc, type: 3}
   shotForce: 6000
   shotRace: 0.1
   activeGun: 0

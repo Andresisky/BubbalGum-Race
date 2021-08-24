@@ -22172,10 +22172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bd6f7f41cb9414bb7ce66b962782da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4511015027697398569, guid: f60956315ec302f4e9057f7bf4607e64, type: 3}
   spawnPoint:
   - {fileID: 2955202952616127282}
   - {fileID: 2955202952390723182}
+  bulletRb: {fileID: 0}
   shotForce: 6000
   shotRace: 0.1
   activeGun: 0
@@ -22239,7 +22239,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 1781643815980147193}
   - {fileID: 6487997727910710848}
-  sceneViewId: 1
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1781643815980147193
