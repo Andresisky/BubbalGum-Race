@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
-public class CharacterSelection : MonoBehaviourPun
+public class CharacterSelection : MonoBehaviourPunCallbacks
 {
     public GameObject[] characters;
     public int selectedCharacter = 0;
@@ -30,7 +31,12 @@ public class CharacterSelection : MonoBehaviourPun
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        PhotonNetwork.LoadLevel("Prototype");
+        //PhotonNetwork.LoadLevel("Prototype");
+    }
+
+    public override void OnJoinedRoom()
+    {
+        PhotonNetwork.LoadLevel("Lobby");
     }
 
 }

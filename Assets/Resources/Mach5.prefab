@@ -21860,7 +21860,7 @@ GameObject:
   - component: {fileID: 1781643815980147193}
   - component: {fileID: 6487997727910710848}
   m_Layer: 0
-  m_Name: March5
+  m_Name: Mach5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22175,7 +22175,6 @@ MonoBehaviour:
   spawnPoint:
   - {fileID: 2955202952616127282}
   - {fileID: 2955202952390723182}
-  bulletRb: {fileID: 0}
   shotForce: 6000
   shotRace: 0.1
   activeGun: 0

@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class SpawnPlayers : MonoBehaviour
+public class SpawnPlayers : MonoBehaviourPun
 {
     public GameObject[] playerPrefab;
-    //public CharacterSelection character;
     int selectedCharacter;
 
     public float minX;
@@ -17,30 +16,27 @@ public class SpawnPlayers : MonoBehaviour
     {
         selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
         Vector3 randomPos = new Vector3(Random.Range(minX, maxX), 2f, Random.Range(minZ, maxZ));
-        //selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
         //playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, randomPos, Quaternion.identity);
-        GameObject prefab = playerPrefab[selectedCharacter];
-        PickPlayer(prefab);
-        prefab = PhotonNetwork.Instantiate(prefab.name, randomPos, Quaternion.identity);
+        PickPlayer();
+        PhotonNetwork.Instantiate(playerPrefab[selectedCharacter].name, randomPos, Quaternion.identity);
 
     }
 
-    void PickPlayer(GameObject prefab)
+    void PickPlayer()
     {
         if (selectedCharacter == 0)
         {
-            prefab.name = "DeLorean";
+            playerPrefab[selectedCharacter].name = "DeLorean";
         }
 
         if (selectedCharacter == 1)
         {
-            prefab.name = "March5";
+            playerPrefab[selectedCharacter].name = "Mach5";
         }
 
         if (selectedCharacter == 2)
         {
-            prefab.name = "RedKiller";
+            playerPrefab[selectedCharacter].name = "RedKiller";
         }
     }
-
 }
