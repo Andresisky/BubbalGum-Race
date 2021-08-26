@@ -7,7 +7,6 @@ public class GunMachine : MonoBehaviourPun
 {
     //public GameObject bullet;
     public Transform[] spawnPoint;
-    public Rigidbody bulletRb;
 
     public float shotForce = 3500;
     public float shotRace = 0.1f;

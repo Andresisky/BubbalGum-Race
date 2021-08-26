@@ -794,6 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createInput: {fileID: 1725711213}
   joinInput: {fileID: 942107255}
+  scene: CharacterSelection
 --- !u!4 &1283478029
 Transform:
   m_ObjectHideFlags: 0
