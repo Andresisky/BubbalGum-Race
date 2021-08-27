@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8310016907450676753}
   - component: {fileID: 8310016907454760561}
   - component: {fileID: 8310016907460057875}
+  - component: {fileID: -8537793248696382360}
   m_Layer: 0
   m_Name: Arbol2
   m_TagString: Untagged
@@ -117,6 +118,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!205 &-8537793248696382360
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310016907452672209}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.498636
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.498636
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.498636
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8310016907452672211
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +202,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c6a9e6baf27ada40b9834c30f5c397d, type: 2}
+  - {fileID: 2100000, guid: a56fe6e4fa8c84149bff66bda55b7465, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
