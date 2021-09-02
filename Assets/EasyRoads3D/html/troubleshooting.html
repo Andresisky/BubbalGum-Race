@@ -28,7 +28,7 @@
 	      <p class="header1" style="color:#000">Troubleshooting
 	      <hr>
 	      <p class="style21">&nbsp;</p>
-	      <p class="style21"><a name="addMarkers"></a></p>
+	      <p class="style21">&nbsp;</p>
 	      <p class="style1"><em><strong>Shift + Click to add road markers does not work, instead the terrain is selected</strong></em></p>
           <p class="style1">The free version does not support multiple terrain tiles in a scene. If this is the case then adding markers will fail when adding them on the terrain that is currently not referenced by Terrain.activeTerrain.          </p>
           <p class="style1">Shift + Clicking not working can also happen in recent Unity versions in a usually customized Unity editor layout that has resulted in keyboard or mouse button events not being captured anymore in OnSceneView(). Instead the clicked object is selected, the terrain in this case. </p>
@@ -104,19 +104,11 @@
 <p class="style1">This can be a result of &quot;Auto&quot; being selected in the Unity Lighting window. The lighting will be recalculated consistently in the background which can cause delays on slower computers. Switching off &quot;Auto&quot; temporarily while working on the road network will fix that.</p>
 <p class="style1">A slowdown of the Unity editor can also be noticeable on very long road sections with no crossings. Please try to Insert I Connectors at intervals. This is also better for runtime performance.</p>
 <p class="style1">&nbsp;</p>
+<p class="style1"><strong><em>EasyRoads3D Alert: [ref: SO01] Missing Side Object info</em></strong></p>
+<p class="style1">This alert message  is usually related to package upgrades in a project using the custom setting Text Mode for Asset Serialization instead of the default Mixed Mode. Please do not save the scene if this is the case, instead follow the instructions pointed out <a href="#assetSerialization" class="link">here</a>. Please contact us if your project does not use Text Mode for Asset Serialization.</p>
+<p class="style1">&nbsp;</p>
 <p class="style1"><strong><em>Build Terrain progressbar doesn't update</em></strong></p>
 <p class="style1">Unity progressbars can only be used and updated through editor scripts. Because the Build functionality is also required for the scripting API, this code currently does not run in an editor script hence why the progressbar only updates per terrain and does not show progress on processed roads. This will be improved, meanwhile please be patient during this process, work is being done in the background.</p>
-<p class="style1">&nbsp;</p>
-<p class="style1"><strong><em>Dual Sided Side Objects appear flipped</em></strong></p>
-<p class="style1">This happens when the &quot;Combine&quot; option is toggled on. For now please avoid this.</p>
-<p class="style1">&nbsp;</p>
-<p class="style1"><strong><em>Tunnel terrain hole issues</em></strong></p>
-<p class="style1">Cutting holes in the terrain for tunnels is complex for various reasons, especially regarding all possible terrain specificatione specially heightmap resolution related. One known issue is transitions between bridge to tunnel sections, especially on lower heightmap resolutions. This can result in wrong terrain cells being removed and terrain cells styll being visible at the start near the road height.<br>
-  <br>
-  Cutting holes in the terrain is in Preview state, feedback is very much appreciated.</p>
-<p class="style1">&nbsp;</p>
-<p class="style1"><em><strong>Our Custom Connection models are not visible in runtime generated road networks</strong></em></p>
-<p class="style1">This happens when the original models used for the Custom Connection does not have &quot;Read/Write Enabled&quot; enabled in the Import settings. Make sure to enable this before creating the custom connection prefab when the road networks are build at runtime instead of in the Unity editor.</p>
 <p class="style1">&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p></td>
