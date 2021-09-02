@@ -10,10 +10,10 @@ Material:
   m_Name: Old Asphalt Decal Blend
   m_Shader: {fileID: 4800000, guid: 3cbd06adee542cf4489b516e000e4876, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _DETAIL_MULX2
-  m_LightmapFlags: 5
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -140,6 +140,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _AmbientOcclusionPower: 1
     - _BumpScale: 1
     - _BumpScale1: 1
@@ -154,7 +155,7 @@ Material:
     - _Metallic1: 0
     - _Metallic2: 0.437
     - _Metallic3: 0.423
-    - _MetallicPower: 1
+    - _MetallicPower: 0
     - _MetallicRoad: 0
     - _Mode: 1
     - _OcclusionStrength: 1
